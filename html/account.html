@@ -4,12 +4,44 @@
         <link rel="stylesheet" href="../css/nav.css">
         <link rel="stylesheet" href="../css/account.css">
     </head>
+
     <body>
         <div class="navbar">
-            <a class="active" href="index.html">Home</a>
-            <a href="account.html">Account Info</a>
+            <a href="index.html">Home</a>
+            <a class="active" href="account.html">Account Info</a>
             <a href="cashback.html">CashBack Program</a>
         </div>
+
         <p>Account info: </p>
+
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th> Settings </th>
+                    <th> Current User Information </th>
+                    <th> Updated Information </th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr> 
+                    <td> Account Owner </td> 
+                    <td > Billy Allen </td> 
+                    <td> <input type="text"> </td> 
+                </tr>
+                <tr> 
+                    <td> Phone Number </td> 
+                    <td > 201-123-4567 </td> <td> 
+                        <input type="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Required: Phone number in the form ###-###-####"> </td> 
+                </tr>
+                <tr> 
+                    <td> Email Address </td> 
+                    <td> ballen@stevens.edu </td> 
+                    <td> <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> </td>
+                </tr>
+            </tbody>
+        </table>
+
     </body>
+
 </html>
