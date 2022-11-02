@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="../css/nav.css">
         <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/index.js"></script>    
     </head>
     <body>
         <div class="navbar">
@@ -10,6 +11,11 @@
             <a href="account.html">Account Info</a>
             <a href="cashback.html">CashBack Program</a>
         </div>
-        <p>Bank App Home</p>
+        <div class="actions">
+            <p>Credit Score: 820</p>
+            <p>Total Balance: $</p> <p id="balance">104600</p>
+            <button onclick="depositClick()">Deposit</button>   
+            <button onclick="withdrawClick()">Withdraw</button>   
+        </div>
     </body>
 </html>
