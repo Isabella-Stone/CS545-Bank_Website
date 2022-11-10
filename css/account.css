@@ -4,3 +4,9 @@
     font-family: montserrat;
     background: linear-gradient(120deg,#2980b9, #8e44ad);
 } */
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}

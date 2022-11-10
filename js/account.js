@@ -1,13 +1,11 @@
 function returnName(){
-    var inputVal = document.getElementById("name").innerHTML;
-    alert("HI");
+    document.getElementById("name").innerHTML = document.getElementById("newname").value;
 }
 
 function returnTel(){
-    let newTel = document.getElementById("tel").value;
-    return newTel;
+    document.getElementById("tel").innerHTML = document.getElementById("newtel").value;
 }
 
 function returnEmail(){
-    
+    document.getElementById("email").innerHTML = document.getElementById("newemail").value;
 }

@@ -13,11 +13,11 @@ function withdrawClick() {
         return;
     }
     if (parseInt(amt) > parseInt(document.getElementById("balance").innerHTML)) {
-        alert("You cannot withdraw more money than what is currently in your account.");
+        alert("You cannot withdraw more money than what is currently in your account. The max amount you can currently withdraw is $" + document.getElementById("balance").innerHTML + ".");
         return;
     }
     document.getElementById("balance").innerHTML = parseInt(document.getElementById("balance").innerHTML) - parseInt(amt);
-    amount-=parseInt(amt);
+    amount -= parseInt(amt);
     document.getElementById("amount_left").innerHTML = amount;
 }
 
