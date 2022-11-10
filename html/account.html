@@ -41,6 +41,39 @@
                 </tr>
             </tbody>
         </table>
+        <br>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th> Settings </th>
+                    <th> Current User Information </th>
+                    <th> Updated User Information </th>
+                </tr>
+            </thead>
+            
+
+            
+            <tbody>
+                <tr> 
+                    <td> Account Owner </td> 
+                    <td> <p id="name">Billy Allen</p> </td> 
+                    <td> <input type="text" placeholder="type new name here" id="name"> 
+                        <button type="button" onclick="returnName()">Submit</button> 
+                    </td> 
+                </tr>
+                <tr> 
+                    <td> Phone Number </td> 
+                    <td> <p id="tel">201-123-4567</p> </td> 
+                    <td> <input type="tel" placeholder="201-123-4567"> <button onclick="returnTel()">Submit</button> </td> 
+                </tr>
+                <tr> 
+                    <td> Email Address </td> 
+                    <td> <p id="email">ballen@stevens.edu</p> </td> 
+                    <td> <input type="email" placeholder="ballen@stevens.edu"> <button onclick="returnEmail()">Submit</button> </td>
+                </tr>
+            </tbody>
+        </table>
+
 
     </body>
 
