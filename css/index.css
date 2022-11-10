@@ -3,6 +3,14 @@
     text-align: center;
 }
 
+
+
 p {
     /* color: red; */
+}
+
+body{
+    background: hsl(218deg 50% 91%);
+    /* background-color: ghostwhite; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
