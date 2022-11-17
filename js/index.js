@@ -7,6 +7,10 @@ function depositClick() {
 }
 
 var amount = 20;
+var count = 2;
+var cb = 50;
+var update = 3;
+var reset = 100;
 function withdrawClick() {
     var amt = prompt("How much would you like to withdraw?");
     if (amt === null ) {
@@ -17,21 +21,27 @@ function withdrawClick() {
         return;
     }
     document.getElementById("balance").innerHTML = parseInt(document.getElementById("balance").innerHTML) - parseInt(amt);
-    amount -= parseInt(amt);
+
+    if(parseInt(amt) < parseInt(amount)){
+        amount -= parseInt(amt);
+    }
+    else{
+        var d = Math.ceil(parseInt(amt)/100);
+        count = count+d;
+        update = update+d;
+        amount = (amount+(reset*d)) - amt;
+        document.getElementById("counter").innerHTML = count;
+        document.getElementById("update").innerHTML = update;
+    }
+    cb = cb+((parseInt(amt))*(count*0.01));
     document.getElementById("amount_left").innerHTML = amount;
+    document.getElementById("amount_earned").innerHTML = cb.toFixed(2);
+    document.getElementById("percent").innerHTML = amt
+    
 }
 
-// var width = 80;
-// var base = setInterval(updateBar, 10)
-// function pauseProgress() {
-//     if (width >= 100){
-//         clearInterval(base);
-//     }
-//     else{
-//         width++;
-//         element.style.width = width + '%';
-//         element.innerHTML = width * 1+ '%';
-//     }
-// }
-// pauseProgress();
+function RedeemClick() {
+    document.getElementById("amount_earned").innerHTML = 0;
+    cb = 0;
+}
 

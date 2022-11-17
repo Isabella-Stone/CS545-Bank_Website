@@ -21,16 +21,16 @@
         </div>
         <div>
             <p>Welcome to your Cashback Rewards!</p>
-            <p>Status:</p>
-            <div class="container">
-                <div class="skill html">80%</div>
-            </div>
 
-            <p>You have earned $50 in cashback rewards!</p>
-            <p>You are currently earning: 2% cashback with every purchase.</p>
+            <label for="cbr">Cash Back Progress:</label>
+            <progress id="cbr" max="100" value="80"> 80% </progress>
+
+            <p>You have earned <p>$<span id = "amount_earned">50</span></p> in cashback rewards!</p>
+            <p>You are currently earning: <span id = "counter">2</span>% cashback with every purchase.</p>
             <br>
-            <p>You are <p id = "amount_left">$20</p> away from reaching your next cashback milestone of 3% cashback.</p>
+            <p>You are <p>$<span id = "amount_left">20</span></p> away from reaching your next cashback milestone of <span id = "update">3</span>% cashback.</p>
             <p>Would you like to redeem your cashback rewards?</p>
+            <button onclick="RedeemClick()">Redeem Now</button>
             <p>Note: Cashback will be sent to address linked to account in the form of a giftcard.</p>
         </div>
     </body>
