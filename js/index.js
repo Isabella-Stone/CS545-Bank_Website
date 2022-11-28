@@ -1,9 +1,15 @@
+var balance;
 function depositClick() {
     var amt = prompt("How much would you like to deposit?");
-    if (amt === null) {
+    var isNumber = /^\d+\.\d+$|^\d+$/;
+    if (!amt.match(isNumber)) {
+        alert("You must enter a valid numerical amount to deposit.")
         return;
     }
-    document.getElementById("balance").innerHTML = parseInt(document.getElementById("balance").innerHTML) + parseInt(amt);
+
+    balance = parseFloat(document.getElementById("balance").innerHTML) + parseFloat(amt);
+    document.getElementById("balance").innerHTML = balance;
+    localStorage.setItem("storeBalance", balance);
 }
 
 var amount = 20;
@@ -13,16 +19,19 @@ var update = 3;
 var reset = 100;
 function withdrawClick() {
     var amt = prompt("How much would you like to withdraw?");
-    if (amt === null ) {
+    var isNumber = /^\d+\.\d+$|^\d+$/;
+    if (!amt.match(isNumber)) {
+        alert("You must enter a valid numerical amount to withdraw.")
         return;
     }
-    if (parseInt(amt) > parseInt(document.getElementById("balance").innerHTML)) {
+
+    if (parseFloat(amt) > parseFloat(document.getElementById("balance").innerHTML)) {
         alert("You cannot withdraw more money than what is currently in your account. The max amount you can currently withdraw is $" + document.getElementById("balance").innerHTML + ".");
         return;
     }
-    document.getElementById("balance").innerHTML = parseInt(document.getElementById("balance").innerHTML) - parseInt(amt);
+    document.getElementById("balance").innerHTML = parseFloat(document.getElementById("balance").innerHTML) - parseFloat(amt);
 
-    if(parseInt(amt) < parseInt(amount)){
+    if(parseFloat(amt) < parseFloat(amount)){
         amount -= parseInt(amt);
     }
     else{

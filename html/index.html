@@ -7,6 +7,17 @@
         <link rel="stylesheet" href= "../css/cashback.css">
         <script src="../js/index.js"></script>    
     </head>
+
+    <script>
+        //console.log('123');
+        var balance = 104600.52;
+        localStorage.setItem("storeBalance", balance);
+        window.onload = function getValues() {
+            //console.log('The Script will load now.');
+            document.getElementById("balance").innerHTML = localStorage.getItem("storeBalance");
+        }
+    </script>
+
     <body>
         <div class="navbar">
             <a class="active" href="index.html">Home</a>
@@ -15,7 +26,7 @@
         </div>
         <div class="actions">
             <p>Credit Score: 820</p>
-            <p>Total Balance: $</p> <p id="balance">104600</p>
+            <p>Total Balance: $</p> <p id="balance">xxx</p>
             <button onclick="depositClick()">Deposit</button>   
             <button onclick="withdrawClick()">Withdraw</button>   
         </div>
