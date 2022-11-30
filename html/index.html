@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../css/nav.css">
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href= "../css/cashback.css">
-        <script src="../js/index.js"></script>    
+        <script src="../js/index.js"></script>  
     </head>
 
     <script>
@@ -22,11 +22,11 @@
         <div class="navbar">
             <a class="active" href="index.html">Home</a>
             <a href="account.html">Account Info</a>
-            <a href="cashback.html">CashBack Program</a>
         </div>
         <div class="actions">
             <p>Credit Score: 820</p>
-            <p>Total Balance: $</p> <p id="balance">xxx</p>
+            <!-- <p>Total Balance: </p> $<p id="balance">xxx</p> -->
+            <p>Total Balance: </p> $<span id = "balance">xxx</span></p>
             <button onclick="depositClick()">Deposit</button>   
             <button onclick="withdrawClick()">Withdraw</button>   
         </div>
@@ -34,9 +34,9 @@
             <p>Welcome to your Cashback Rewards!</p>
 
             <label for="cbr">Cash Back Progress:</label>
-            <progress id="cbr" max="100" value="80"> 80% </progress>
-
-            <p>You have earned <p>$<span id = "amount_earned">50</span></p> in cashback rewards!</p>
+            <progress id="cbr" value="80" max="100"></progress>
+            
+            <p>You have earned <p>$<span id = "amount_earned">80</span></p> in cashback rewards!</p>
             <p>You are currently earning: <span id = "counter">2</span>% cashback with every purchase.</p>
             <br>
             <p>You are <p>$<span id = "amount_left">20</span></p> away from reaching your next cashback milestone of <span id = "update">3</span>% cashback.</p>

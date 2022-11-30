@@ -14,7 +14,7 @@ function depositClick() {
 
 var amount = 20;
 var count = 2;
-var cb = 50;
+var cb = 80;
 var update = 3;
 var reset = 100;
 function withdrawClick() {
@@ -43,14 +43,15 @@ function withdrawClick() {
         document.getElementById("update").innerHTML = update;
     }
     cb = cb+((parseInt(amt))*(count*0.01));
+    document.getElementById("cbr").value = 100-amount;
     document.getElementById("amount_left").innerHTML = amount;
     document.getElementById("amount_earned").innerHTML = cb.toFixed(2);
-    document.getElementById("percent").innerHTML = amt
-    
+    document.getElementById("percent").innerHTML = amt;
 }
 
 function RedeemClick() {
     document.getElementById("amount_earned").innerHTML = 0;
     cb = 0;
+    document.getElementById("cbr").value = 0;
 }
 
