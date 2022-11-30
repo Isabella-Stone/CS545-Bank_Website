@@ -16,7 +16,7 @@ progress {
     border-radius: 7px; 
     width: 45%;
     height: 22px;
-    margin-left: -11.5%;
+    margin-left: 0%;
     box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
   }
   progress::-webkit-progress-bar {
