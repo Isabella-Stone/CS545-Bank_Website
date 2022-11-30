@@ -52,5 +52,6 @@ function withdrawClick() {
 function RedeemClick() {
     document.getElementById("amount_earned").innerHTML = 0;
     cb = 0;
+    document.getElementById("cbr").value = 0;
 }
 
