@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="../css/general.css">
         <link rel="stylesheet" href="../css/nav.css">
@@ -20,31 +20,41 @@
 
     <body>
         <div class="navbar">
-            <a class="active" href="index.html">Home</a>
-            <a href="account.html">Account Info</a>
+            <a class="active" href="index.html">HOME</a>
+            <a href="account.html">ACCOUNT INFO</a>
         </div>
         <div class="contain">
             <div class="balance">
-                <p>Credit Score: 820</p>
                 <!-- <p>Total Balance: </p> $<p id="balance">xxx</p> -->
-                <p>Total Balance: </p>$<span id = "balance" STYLE="font-weight:bold; font-size:32pt">xxx</span></p>
-                <button onclick="depositClick()">Deposit</button>   
-                <button onclick="withdrawClick()">Withdraw</button>   
+                <h2>Total Balance </p>$<span id = "balance" STYLE="font-weight:bold; font-size:32pt">xxx</span></h2>
+                <button class="button-5" onclick="depositClick()">Deposit</button>   
+                <button class="button-5" onclick="withdrawClick()">Withdraw</button>
+                <p>Credit Score: 820</p>
             </div>
         </div>
-        <div>
-            <p>Welcome to your Cashback Rewards!</p>
-
-            <label for="cbr">Cash Back Progress:</label>
-            <progress id="cbr" value="80" max="100"></progress>
-            
-            <p>You have earned <p>$<span id = "amount_earned">80</span></p> in cashback rewards!</p>
-            <p>You are currently earning: <span id = "counter">2</span>% cashback with every purchase.</p>
-            <br>
-            <p>You are <p>$<span id = "amount_left">20</span></p> away from reaching your next cashback milestone of <span id = "update">3</span>% cashback.</p>
-            <p>Would you like to redeem your cashback rewards?</p>
-            <button onclick="RedeemClick()">Redeem Now</button>
-            <p>Note: Cashback will be sent to address linked to account in the form of a giftcard.</p>
+        <div class="OuterLowerContainer">
+            <div class="LowerContainer">
+                <div class="CashbackContainer">
+                    <h3>Welcome to your Cashback Rewards!</h3>
+                    
+                    <progress id="cbr" value="80" max="100"></progress>
+                    <p>Cashback Progress</p>
+                    <hr>
+                    <!-- <label for="cbr">Cashback Progress</label> -->
+                
+                    <p>Cashback Rewards: $<span id = "amount_earned">80</span></p>
+                    <p>You are currently earning: <span id = "counter">2</span>% cashback with every purchase.</p>
+                    <p>You are $<span id = "amount_left">20</span> away from reaching your next cashback milestone of <span id = "update">3</span>% cashback.</p>
+                </div>
+                <br>
+                <div class="RedeemContainer">
+                    <p>Would you like to redeem your cashback rewards?</p>
+                    <button class="button-5" onclick="RedeemClick()">Redeem Now</button>
+                    <p>Note: Cashback will be sent to address linked to account in the form of a giftcard.</p>
+                </div>
+                
+            </div>
         </div>
+        
     </body>
 </html>
