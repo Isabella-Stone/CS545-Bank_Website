@@ -2,8 +2,9 @@
     padding: 50px;
 }
 
-p {
-    /* color: red; */
+.title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: larger;
 }
 
 .contain {
