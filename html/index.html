@@ -34,7 +34,7 @@
                 <h2>Total Balance </p>$<span id = "balance" STYLE="font-weight:bold; font-size:32pt">xxx</span></h2>
                 <button class="button-5" onclick="depositClick()">Deposit</button>   
                 <button class="button-5" onclick="withdrawClick()">Withdraw</button>
-                <p>Credit Score: 820</p>
+                <p style="line-height: 1.5;">Credit Score: 820</p>
             </div>
         </div>
         <div class="OuterLowerContainer">
@@ -43,16 +43,20 @@
                     <h3>Welcome to your Cashback Rewards!</h3>
                     
                     <progress id="cbr" value="80" max="100"></progress>
-                    <p>Cashback Progress</p>
+                    <p style="line-height: 1.5;">Cashback Progress</p>
                     <hr>
                     <!-- <label for="cbr">Cashback Progress</label> -->
                 
+                    <!-- this was before the line-height stuff, in case things get messed up
                     <p>Cashback Rewards: $<span id = "amount_earned">80</span></p>
                     <p>You are currently earning: <span id = "counter">2</span>% cashback with every purchase.</p>
-                    <p>You are $<span id = "amount_left">20</span> away from reaching your next cashback milestone of <span id = "update">3</span>% cashback.</p>
+                    <p>You are $<span id = "amount_left">20</span> away from reaching your next cashback milestone of <span id = "update">3</span>% cashback.</p> -->
+                    <p style="line-height: 1.5;">Cashback Rewards: $<span id = "amount_earned">80</span><br>
+                    You are currently earning: <span id = "counter">2</span>% cashback with every purchase.<br>
+                    You are $<span id = "amount_left">20</span> away from reaching your next cashback milestone of <span id = "update">3</span>% cashback.</p>
                 </div>
                 <br>
-                <div class="RedeemContainer">
+                <div style="line-height: 1.5;" class="RedeemContainer">
                     <p>Would you like to redeem your cashback rewards?</p>
                     <button class="button-5" onclick="RedeemClick()">Redeem Now</button>
                     <p>Note: Cashback will be sent to address linked to account in the form of a giftcard.</p>
