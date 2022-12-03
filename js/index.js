@@ -16,7 +16,6 @@ window.onload = function getValues() {
         localStorage.setItem("storeCBR", document.getElementById("cbr").value);
         localStorage.setItem("storeAmtLeft", document.getElementById("amount_left").innerHTML);
         localStorage.setItem("storeAmtEarned", document.getElementById("amount_earned").innerHTML);
-        //localStorage.setItem("storePercent", document.getElementById("percent").innerHTML);
     }
     document.getElementById("balance").innerHTML = localStorage.getItem("storeBalance");
     document.getElementById("counter").innerHTML = localStorage.getItem("storeCounter");
@@ -24,7 +23,6 @@ window.onload = function getValues() {
     document.getElementById("cbr").value = localStorage.getItem("storeCBR");
     document.getElementById("amount_left").innerHTML = localStorage.getItem("storeAmtLeft");
     document.getElementById("amount_earned").innerHTML = localStorage.getItem("storeAmtEarned");
-    //document.getElementById("percent").innerHTML = localStorage.getItem("storePercent");
 }
 function depositClick() {
     var amt = prompt("How much would you like to deposit?");
@@ -36,7 +34,7 @@ function depositClick() {
 
     balance = parseFloat(document.getElementById("balance").innerHTML) + parseFloat(amt);
     document.getElementById("balance").innerHTML = balance;
-    
+
     localStorage.setItem("storeBalance", balance);
     sessionStorage.setItem("valUpdated", 'true');
 }
@@ -77,7 +75,6 @@ function withdrawClick() {
     document.getElementById("cbr").value = 100-amount;
     document.getElementById("amount_left").innerHTML = amount;
     document.getElementById("amount_earned").innerHTML = cb.toFixed(2);
-    //document.getElementById("percent").innerHTML = amt;    
     
     localStorage.setItem("storeBalance", balance);
     localStorage.setItem("storeCounter", document.getElementById("counter").innerHTML);
