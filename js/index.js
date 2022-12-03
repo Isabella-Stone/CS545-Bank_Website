@@ -1,4 +1,18 @@
 var balance;
+var valueUpdated = false;
+
+window.onload = function getValues() {
+    //console.log('The Script will load now.');
+    if (sessionStorage.getItem("valUpdated") == null || sessionStorage.getItem("valUpdated") == 'false')
+    {
+        sessionStorage.setItem("valUpdated", valueUpdated);
+    }
+    if (sessionStorage.getItem("valUpdated") != 'true')
+    {
+        localStorage.setItem("storeBalance", 104600.52);
+    }
+    document.getElementById("balance").innerHTML = localStorage.getItem("storeBalance");
+}
 function depositClick() {
     var amt = prompt("How much would you like to deposit?");
     var isNumber = /^\d+\.\d+$|^\d+$/;
@@ -10,6 +24,7 @@ function depositClick() {
     balance = parseFloat(document.getElementById("balance").innerHTML) + parseFloat(amt);
     document.getElementById("balance").innerHTML = balance;
     localStorage.setItem("storeBalance", balance);
+    sessionStorage.setItem("valUpdated", 'true');
 }
 
 var amount = 20;
@@ -29,7 +44,10 @@ function withdrawClick() {
         alert("You cannot withdraw more money than what is currently in your account. The max amount you can currently withdraw is $" + document.getElementById("balance").innerHTML + ".");
         return;
     }
-    document.getElementById("balance").innerHTML = parseFloat(document.getElementById("balance").innerHTML) - parseFloat(amt);
+    balance = parseFloat(document.getElementById("balance").innerHTML) - parseFloat(amt);
+    document.getElementById("balance").innerHTML = balance;
+    sessionStorage.setItem("valUpdated", 'true');
+    localStorage.setItem("storeBalance", balance);
 
     if(parseFloat(amt) < parseFloat(amount)){
         amount -= parseInt(amt);
@@ -46,7 +64,7 @@ function withdrawClick() {
     document.getElementById("cbr").value = 100-amount;
     document.getElementById("amount_left").innerHTML = amount;
     document.getElementById("amount_earned").innerHTML = cb.toFixed(2);
-    document.getElementById("percent").innerHTML = amt;
+    document.getElementById("percent").innerHTML = amt;    
 }
 
 function RedeemClick() {
