@@ -1,6 +1,9 @@
 var balance;
 var valueUpdated = false;
 
+
+
+
 window.onload = function getValues() {
     //console.log('The Script will load now.');
     if (sessionStorage.getItem("valUpdated") == null || sessionStorage.getItem("valUpdated") == 'false')
@@ -70,6 +73,9 @@ function withdrawClick() {
         amount = (amount+(reset*d)) - amt;
         document.getElementById("counter").innerHTML = count;
         document.getElementById("update").innerHTML = update;
+        var emoji1 = String.fromCodePoint(0x1F389);
+        //var emoji2 = String.fromCodePoint(0x);
+        alert(emoji1 + emoji1 + emoji1 + " Congrats! You just reached your next milestone! " + emoji1 +emoji1 + emoji1);
     }
     cb = cb+((parseInt(amt))*(count*0.01));
     document.getElementById("cbr").value = 100-amount;
@@ -93,5 +99,8 @@ function RedeemClick() {
     localStorage.setItem("storeAmtEarned", document.getElementById("amount_earned").innerHTML);
     localStorage.setItem("storeCBR", document.getElementById("cbr").value);
     sessionStorage.setItem("valUpdated", 'true');
+
+    var emoji = String.fromCodePoint(0x1F603);
+    alert("Check your email to receive your rewards! " + emoji);
 }
 
