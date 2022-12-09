@@ -1,6 +1,6 @@
 .navbar {
     text-align: center;
-    background-color: white;
+    background-color: #17a0a0;
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -20,6 +20,7 @@ a {
     color: black;
     padding-left: 15px;
     padding-right: 15px;
+    font-weight: bold;
 }
 
 a:link { 

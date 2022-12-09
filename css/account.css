@@ -10,7 +10,7 @@ body {
 }
 
 table {
-  background-color: #7598d9;
+  background-color: #17a0a0;
   border-radius: 15px;
   border-collapse: collapse;
   margin-left: auto;
@@ -36,7 +36,7 @@ tbody tr {
   transition: background 0.25s ease;
 }
 tbody tr:hover {
-  background: #3e70cd;
+  background: #0b7474;
 }
 .Header{
   padding-top: 20px;
