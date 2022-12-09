@@ -58,3 +58,12 @@ tbody tr:hover {
   transition: all 0.3s;
 }
 
+img {
+  height: 100px;
+  width: 100px;
+  float: right;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+
